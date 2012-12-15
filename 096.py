@@ -108,15 +108,5 @@ def eliminate(values,s,d):   # values['A3'] = '3'
                 return False
     return values
 
-def display(values):
-    "Display these values as a 2-D grid."
-    width = 1+max(len(values[s]) for s in squares)
-    line = '+'.join(['-'*(width*3)]*3)
-    for r in rows:
-        print ''.join(values[r+c].center(width)+('|' if c in '36' else '')
-                      for c in cols)
-        if r in 'CF': print line
-    print
-
 hardest_sudoku_on_earth ='.....6....59.....82....8....45........3........6..3.54...325..6..................'
 print caculate()
