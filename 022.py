@@ -15,17 +15,16 @@ What is the total of all the name scores in the file?"""
 LETTERS = '_ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 def scores():
     names = readnames('names.txt')
-    return sum(name_score(names[i], i) for i in range(1, len(names)))
-    
+    return sum(name_score(name, i) for (i, name) in enumerate(names, 1))
+
 def readnames(filename):
     nlists = file(filename).read().split(',')
-    return [''] + sorted(nlists)
+    return sorted(nlists)
 
 def name_score(name, i):
     '"ABBEY"'
     name = name[1:-1]
-    score = sum(LETTERS.index(w) for w in name) * i
-    return score
+    return sum(LETTERS.index(w) for w in name) * i
 
 
 
