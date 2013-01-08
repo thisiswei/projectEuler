@@ -17,6 +17,16 @@ What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed 
 
 """
 
+"""pattern 
+   diagonal nums
+2     3   5  7  9
+4     13 17 21 25
+6     31 37 43 49
+8     57 65 73 81
+.
+.
+1000
+"""      
 
 def ps(n=1001):
     totalsum = 0
