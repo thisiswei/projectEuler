@@ -4,19 +4,12 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 """
 
 
-maximum = 999*999
-minimum = 100*100 
-
-def is_p(n):
-    digits = str(n) 
-    return digits[::-1] == digits
-
-def find():
-    for i in range(maximum,minimum,-1):
-        if is_p(i): 
-            for j in range(999,100,-1):
+def ps4():
+    for i in range(999*999, 100*100, -1):
+        if str(i) == str(i)[::-1]:
+            for j in range(999, 100, -1):
                 if not i % j:
                     if len(str(i/j)) == 3:
-                        return i,j   
+                        return i, j
 
 

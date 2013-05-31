@@ -5,20 +5,12 @@
 #find the sum of the even-valued terms.
 
 
-million = 1000000
 
 def fib():
-    current = 0
-    after = 1
-    total = 0
-    while current < 4 * million:
-        current, after = after, current + after
-        if not (current % 2):
-            total += current  
-    return total 
+    pre = 0
+    current = 1
+    while pre < 4000000
+        yield pre
+        pre, current = current, current + pre
 
-
-
-
-print fib()
-
+print (sum(i for i in fib() if not i%2))
